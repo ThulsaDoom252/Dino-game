@@ -1,6 +1,7 @@
 const dino = document.getElementById("dino")
 const cactus = document.getElementById("cactus")
 
+document.addEventListener("touchstart", (event) => jump())
 document.addEventListener("keydown", (event) => jump())
 
 const jump = () => {
@@ -14,6 +15,6 @@ setInterval(() => {
     let dinoPos = parseInt(window.getComputedStyle(dino).getPropertyValue("top"))
     let cactusPos = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"))
     if (cactusPos > 0 && cactusPos < 50 && dinoPos >= 140) {
-        alert("GAME OVER")
+        return alert("GAME OVER")
     }
 }, 20)
