@@ -101,7 +101,7 @@ input:-webkit-autofill:active {
     border-bottom: 1px gray solid;
 }
 
-.dino {
+#dino {
     width: 50px;
     height: 50px;
     background-image: url("./icons/dino.png");
@@ -110,7 +110,7 @@ input:-webkit-autofill:active {
     top: 150px;
 }
 
-.cactus {
+#cactus {
     width: 40px;
     height: 40px;
     background-image: url("./icons/cactus.png");
@@ -118,4 +118,41 @@ input:-webkit-autofill:active {
     position: relative;
     top: 110px;
     left: 580px;
+    animation: cactus-incoming 0.8s linear infinite;
+}
+
+.jump {
+    animation: jump 0.3s  linear;
+}
+
+@keyframes cactus-incoming {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -40px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 130px;
+    }
+
+    50% {
+        top: 80px;
+    }
+
+    80% {
+        top: 130px;
+    }
+
+    100% {
+        top: 150px;
+    }
 }
