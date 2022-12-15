@@ -118,14 +118,29 @@ input:-webkit-autofill:active {
     position: relative;
     top: 110px;
     left: 580px;
-    animation: cactus-incoming 0.8s linear infinite;
+}
+
+.reset {
+    animation: reset infinite;
+
+}
+
+.move {
+    animation: move linear infinite 0.8s;
 }
 
 .jump {
     animation: jump 0.3s  linear;
 }
 
-@keyframes cactus-incoming {
+@keyframes reset {
+    0% {
+        left: 580px;
+    }
+
+}
+
+@keyframes move {
     0% {
         left: 580px;
     }
